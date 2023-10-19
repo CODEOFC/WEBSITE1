@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Tips - Ministry of Infrastructure</title>
+  <style>
+	/* Reset some default styles */
+	* {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	}
+  
+	body {
+	  font-family: Arial, sans-serif;
+	  background-color: #f4f4f4;
+	}
+  
+	header {
+	  background-color: #80ece2;
+	  padding: 10px;
+	}
+  
+	nav ul {
+	  list-style: none;
+	  text-align: center;
+	}
+  
+	nav ul li {
+	  display: inline-block;
+	  margin-right: 20px;
+	}
+  
+	nav ul li a {
+	  color: #333;
+	  text-decoration: none;
+	  font-weight: bold;
+	  transition: color 0.3s ease;
+	}
+  
+	nav ul li a:hover {
+	  color: #007bff;
+	}
+  
+	main {
+	  max-width: 800px;
+	  margin: 0 auto;
+	  padding: 20px;
+	  background-color: #fff;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	  margin-bottom: 20px;
+	}
+  
+	h1, h2 {
+	  margin-top: 20px;
+	  margin-bottom: 10px;
+	}
+  
+	ul {
+	  list-style-type: disc;
+	  padding-left: 20px;
+	}
+  
+	form {
+	  margin-top: 20px;
+	}
+  
+	label {
+	  display: block;
+	  margin-bottom: 5px;
+	  font-weight: bold;
+	}
+  
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+	  width: 100%;
+	  padding: 10px;
+	  margin-bottom: 10px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	}
+  
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="tel"]:focus {
+	  border-color: #007bff;
+	}
+  
+	input[type="submit"] {
+	  background-color: #007bff;
+	  color: #fff;
+	  padding: 10px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  transition: background-color 0.3s ease;
+	}
+  
+	input[type="submit"]:hover {
+	  background-color: #0056b3;
+	}
+  
+	footer {
+	  background-color: #f1f1f1;
+	  padding: 10px;
+	  text-align: center;
+	  font-size: 14px;
+	  color: #777;
+	  margin-top: 20px;
+	}
+	button {
+		background-color: #007bff;
+		color: #fff;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		font-size: 16px; /* Increase font size for better readability */
+	  }
+	
+	  button:hover {
+		background-color: #0056b3;
+	  }
+  </style>
+  
+
+  <script>
+    // JavaScript code goes here
+    // Example: Toggle visibility of safety tips
+    function toggleSafetyTips() {
+      var safetyTips = document.getElementById("safety-tips");
+      if (safetyTips.style.display === "none") {
+        safetyTips.style.display = "block";
+      } else {
+        safetyTips.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Navigation bar with links to other pages -->
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="financial-assistance.html">Financial Assistance</a></li>
+        <li><a href="connection-guidelines.html">Connection Guidelines</a></li>
+        <li><a href="safety-tips.html">Safety Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Electricity Safety Tips</h1>
+      <!-- Add an id to the safety tips section for JavaScript to target -->
+      <h2>At Home:</h2>
+      <ul>
+        <li>Always unplug appliances when not in use.</li>
+        <li>Avoid overloading electrical outlets.</li>
+        <li>Keep electrical cords away from water sources.</li>
+      </ul>
+
+      <h2>At School:</h2>
+      <ul>
+        <li>Teach children about electrical safety.</li>
+        <li>Ensure proper maintenance of electrical equipment.</li>
+        <li>Report any damaged or exposed wiring immediately.</li>
+      </ul>
+
+      <h2>At Work:</h2>
+      <ul>
+        <li>Follow all safety procedures and guidelines.</li>
+        <li>Use personal protective equipment when necessary.</li>
+        <li>Know the location of emergency exits and fire extinguishers.</li>
+      </ul>
+
+      <!-- Add a button to toggle the visibility of the safety tips section -->
+      <button onclick="toggleSafetyTips()"> For More Safety Tips</button>
+      <div id="safety-tips" style="display: none;">
+        <h2>Additional Safety Tips:</h2>
+        <ul>
+          <li>Never touch electrical wires with wet hands.</li>
+          <li>Regularly inspect electrical cords for damage.</li>
+          <li>Turn off appliances before unplugging them.</li>
+        </ul>
+      </div>
+	  <!-- Add the embedded video here -->
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/vhtQGQbuq6w" frameborder="0" allowfullscreen></iframe>
+</section>
+</main>
+
+  <footer>
+    <p>© 2022 Ministry of Infrastructure. All rights reserved.</p>
+  </footer>
+</body>
+</html>

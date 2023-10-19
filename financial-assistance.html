@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Assistance - Ministry of Infrastructure</title>
+    <style>
+      /* Reset some default styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+    
+      header {
+        background-color: #80ece2;
+        padding: 10px;
+      }
+    
+      nav ul {
+        list-style: none;
+        text-align: center;
+      }
+    
+      nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    
+      nav ul li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+    
+      nav ul li a:hover {
+        color: #007bff;
+      }
+    
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+    
+      h1, h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+    
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+    
+      form {
+        margin-top: 20px;
+      }
+    
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+    
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus {
+        border-color: #007bff;
+      }
+    
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    
+      footer {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+        margin-top: 20px;
+      }
+    </style>
+    
+  <script>
+    // JavaScript code goes here
+    // Example: Validate the form before submitting
+    document.addEventListener("DOMContentLoaded", function() {
+      var form = document.querySelector("form");
+
+      form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var isValid = validateForm(); // Custom function to validate the form
+
+        if (isValid) {
+          form.submit();
+        } else {
+          alert("Please fill out all required fields.");
+        }
+      });
+
+      function validateForm() {
+        var requiredInputs = form.querySelectorAll("input[required]");
+
+        for (var i = 0; i < requiredInputs.length; i++) {
+          if (requiredInputs[i].value === "") {
+            return false; // Return false if any required field is empty
+          }
+        }
+
+        return true; // Return true if all required fields are filled
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Navigation bar with links to other pages -->
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="financial-assistance.html">Financial Assistance</a></li>
+        <li><a href="connection-guidelines.html">Connection Guidelines</a></li>
+        <li><a href="safety-tips.html">Safety Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Financial Assistance for Pole and Line Installations</h1>
+      <ol>
+        <li>Step 1: Check eligibility requirements.</li>
+        <li>Step 2: Gather necessary documents.</li>
+        <li>Step 3: Fill out the application form.</li>
+        <li>Step 4: Submit the form and documents to our office.</li>
+      </ol>
+
+      <h2>Eligibility Criteria</h2>
+      <ul>
+        <li>Must be a resident of Grenada.</li>
+        <li>Must meet income eligibility requirements.</li>
+        <li>Must not have any outstanding debts to GRENLEC.</li>
+      </ul>
+      <form method="post" action="submit.php">
+        <!-- Form fields go here -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+        
+        <label for="address">Address (Grenada Only):</label>
+        <input type="text" id="address" name="address" required autocomplete="on">
+<div id="addressSuggestions" class="suggestions"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  var addresses = [
+    // List of villages, parishes, and street names in Grenada
+    "Carriacou",
+    "Gouyave",
+    "Sauteurs",
+    "La Poterie",
+    "Woburn",
+    "Mount Nesbit",
+    "Mount Carmel",
+    "Victoria",
+    // ...other addresses
+  ];
+
+  $("#address").on("input", function() {
+    var inputValue = $(this).val();
+    var suggestions = [];
+
+    if (inputValue.length > 0) {
+      suggestions = addresses.filter(function(address) {
+        return address.toLowerCase().includes(inputValue.toLowerCase());
+      });
+    }
+
+    showSuggestions(suggestions);
+  });
+
+  function showSuggestions(suggestions) {
+    var suggestionsContainer = $("#addressSuggestions");
+    suggestionsContainer.empty();
+
+    if (suggestions.length > 0) {
+      suggestions.forEach(function(suggestion) {
+        var suggestionElement = $("<div>").addClass("suggestion").text(suggestion);
+        suggestionElement.on("click", function() {
+          $("#address").val(suggestion);
+          suggestionsContainer.empty();
+        });
+        suggestionsContainer.append(suggestionElement);
+      });
+    } else {
+      var noSuggestionsElement = $("<div>").addClass("no-suggestions").text("No suggestions");
+      suggestionsContainer.append(noSuggestionsElement);
+    }
+  }
+});
+</script>
+
+		<input type="submit" value="Submit">
+	  </form>
+	  
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2022 Ministry of Infrastructure. All rights reserved.</p>
+  </footer>
+</body>
+</html>

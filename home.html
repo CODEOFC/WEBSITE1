@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Ministry of Infrastructure</title>
+  <style>
+	/* Reset some default styles */
+	* {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	}
+	
+	body {
+	  font-family: Arial, sans-serif;
+	  background-color: #f4f4f4;
+	}
+	
+	header {
+	  background-color: #80ece2;
+	  padding: 10px;
+	  display: flex;
+	  justify-content: space-between; /* Adjust alignment of images and navigation */
+	}
+	
+	.logo-container {
+	  display: inline-block;
+	}
+	
+	.logo-container img {
+	  max-width: 100%; /* Ensure images are proportional */
+	}
+	
+	nav ul {
+	  list-style: none;
+	  text-align: center;
+	}
+	
+	nav ul li {
+	  display: inline-block;
+	  margin-right: 20px;
+	}
+	
+	nav ul li a {
+	  color: #333;
+	  text-decoration: none;
+	  font-weight: bold;
+	  transition: color 0.3s ease;
+	}
+	
+	nav ul li a:hover {
+	  color: #007bff;
+	}
+	
+	main {
+	  max-width: 800px;
+	  margin: 0 auto;
+	  padding: 20px;
+	  background-color: #fff;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	  margin-bottom: 20px;
+	}
+	
+	h1, h2 {
+	  margin-top: 20px;
+	  margin-bottom: 10px;
+	}
+	
+	ul {
+	  list-style-type: disc;
+	  padding-left: 20px;
+	}
+	
+	form {
+	  margin-top: 20px;
+	}
+	
+	label {
+	  display: block;
+	  margin-bottom: 5px;
+	  font-weight: bold;
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+	  width: 100%;
+	  padding: 10px;
+	  margin-bottom: 10px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	}
+	
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="tel"]:focus {
+	  border-color: #007bff;
+	}
+	
+	input[type="submit"] {
+	  background-color: #007bff;
+	  color: #fff;
+	  padding: 10px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  transition: background-color 0.3s ease;
+	}
+	
+	input[type="submit"]:hover {
+	  background-color: #0056b3;
+	}
+	
+	footer {
+	  background-color: #f1f1f1;
+	  padding: 10px;
+	  text-align: center;
+	  font-size: 14px;
+	  color: #777;
+	  margin-top: 20px;
+	}
+	</style>
+	
+  
+
+  <script>
+    // JavaScript code goes here
+    // Example: Display a welcome message based on the time of day
+    document.addEventListener("DOMContentLoaded", function() {
+      var now = new Date();
+      var hour = now.getHours();
+      var greeting;
+
+      if (hour < 12) {
+        greeting = "Good Morning";
+      } else if (hour < 18) {
+        greeting = "Good Afternoon";
+      } else {
+        greeting = "Good Evening";
+      }
+
+      var welcomeMessage = document.querySelector("#welcome-message");
+      welcomeMessage.textContent = greeting + ", welcome to the Ministry of Infrastructure!";
+    });
+  </script>
+</head>
+<body>
+	<header>
+		<div class="logo-container">
+		  <a href="https://www.gov.gd/">
+			<img src="c:\Users\franc\Downloads\infrastructure.png" alt="Ministry of Grenada Logo" width="200" height="100">
+		  </a>
+		</div>
+		<div class="logo-container">
+		  <a href="https://grenlec.com/">
+			<img src="c:\Users\franc\Downloads\1519865154875.png" alt="Grenlec" width="200" height="100">
+		  </a>
+		</div>
+		<nav>
+		  <!-- Navigation bar with links to other pages -->
+		  <ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="financial-assistance.html">Financial Assistance</a></li>
+			<li><a href="connection-guidelines.html">Connection Guidelines</a></li>
+			<li><a href="safety-tips.html">Safety Tips</a></li>
+		  </ul>
+		</nav>
+	  </header>
+	  <main>
+		<section>
+			<h1 id="welcome-message">Welcome to the Ministry of Infrastructure</h1>
+			<p>If you are a new user, we are pleased to welcome you to our website. Here, you can find information about financial assistance, connection guidelines, safety tips, and more.</p></p>
+		</section>
+	
+		<section id="pole-installation-overview">
+			<h2>Overview of Pole Installation Process</h2>
+			<p>Our pole installation process involves the following steps:</p>
+			<ol>
+				<li>Site Assessment: We assess the location to determine the need for new poles.</li>
+				<li>Pole Placement: New poles are strategically placed based on assessment results.</li>
+				<li>Wiring: Electrical wiring is installed on the new poles to provide power.</li>
+				<li>Quality Check: We ensure the installation meets safety and quality standards.</li>
+				<li>Connection: Once installed, you can connect to the power grid.</li>
+			</ol>
+			<p>For more detailed information, you can <a href="connection-guidelines.html">visit our Connection Guidelines page</a>.</p>
+		</section>
+	</main>
+	
+  <footer>
+    <p>© 2022 Ministry of Infrastructure. All rights reserved.</p>
+  </footer>
+</body>
+</html>

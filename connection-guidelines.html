@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connection Guidelines - Ministry of Infrastructure</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+  
+    header {
+      background-color: #80ece2;
+      padding: 10px;
+    }
+  
+    nav ul {
+      list-style: none;
+      text-align: center;
+    }
+  
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+  
+    nav ul li a:hover {
+      color: #007bff;
+    }
+  
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+  
+    h1, h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+  
+    form {
+      margin-top: 20px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus {
+      border-color: #007bff;
+    }
+  
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  
+    footer {
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin-top: 20px;
+    }
+  </style>  
+  <script>
+    // JavaScript code goes here
+    // Example: Highlight the current page in the navigation bar
+    document.addEventListener("DOMContentLoaded", function() {
+      var currentPage = window.location.pathname.split("/").pop();
+      var navLinks = document.querySelectorAll("nav a");
+
+      navLinks.forEach(function(link) {
+        var linkPage = link.href.split("/").pop();
+        if (currentPage === linkPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Navigation bar with links to other pages -->
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="financial-assistance.html">Financial Assistance</a></li>
+        <li><a href="connection-guidelines.html">Connection Guidelines</a></li>
+        <li><a href="safety-tips.html">Safety Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Guidelines for Temporary and Permanent Connections</h1>
+      <h2>Temporary Connections:</h2>
+      <ul>
+        <li>Step 1: Contact GRENLEC to schedule an appointment.</li>
+        <li>Step 2: Provide necessary documents and payment.</li>
+        <li>Step 3: Await approval and confirmation.</li>
+      </ul>
+  
+      <h2>Permanent Connections:</h2>
+      <ul>
+        <li>Step 1: Submit an application for a permanent connection.</li>
+        <li>Step 2: Coordinate with GRENLEC for site inspection.</li>
+        <li>Step 3: Pay the required fees and provide necessary documents.</li>
+        <li>Step 4: Schedule installation of poles and lines.</li>
+      </ul>
+    </section>
+  
+    <section>
+      <h2>Electricity Connection by GRENLEC</h2>
+      <p>If you are looking for detailed information about electricity connection services provided by GRENLEC, please visit the <a href="https://grenlec.com/" target="_blank">GRENLEC website</a>. GRENLEC offers a range of services and guidelines for connecting to the power grid.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2022 Ministry of Infrastructure. All rights reserved.</p>
+  </footer>
+</body>
+</html>
